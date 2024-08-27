@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home | Viola</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.css" />
+  </head>
+  <body x-data="{ openMenu: false, openDropdown: false, openModal: false }">
+    <div class="theme light">
+      <nav
+        id="top"
+        class="navbar is-transparent is-light has-background-white has-shadow"
+      >
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="/"
+              ><span
+                class="title is-size-5 is-uppercase has-text-weight-bold has-text-dark"
+                >PATU<span class="has-text-primary">TECHZ</span></span
+              ></a
+            ><a
+              class="navbar-burger"
+              :class="{ 'is-active': openMenu }"
+              @click="openMenu = ! openMenu"
+              ><span aria-hidden="true"></span><span aria-hidden="true"></span
+              ><span aria-hidden="true"></span
+            ></a>
+          </div>
+          <div
+            class="navbar-menu has-text-centered"
+            :class="{ 'is-active': openMenu }"
+          >
+            <div class="navbar-start"></div>
+            <div class="navbar-end">
+              <a class="navbar-item has-text-weight-semibold" href="#service"
+                >Services</a
+              ><a class="navbar-item has-text-weight-semibold" href="#about"
+                >About</a
+              ><a class="navbar-item has-text-weight-semibold" href="#projects"
+                >Projects</a
+              >
+              <div class="navbar-item">
+                <a
+                  class="button is-primary is-rounded is-outlined is-dark is-fullwidth has-text-weight-semibold"
+                  href="#contact"
+                  ><span class="icon"><i class="fas fa-phone"></i></span
+                  ><span>Contact</span></a
+                >
+              </div>
+              <div class="navbar-item has-dropdown is-hoverable is-hidden">
+                <a class="navbar-link is-arrowless"
+                  ><img
+                    class="mr-3"
+                    src="./img/avatar.jpg"
+                    style="
+                      max-width: 48px;
+                      max-height: 48px;
+                      border-radius: 50%;
+                    "
+                  /><span class="has-text-weight-semibold"
+                    >Patrick Uche</span
+                  ></a
+                >
+                <div class="navbar-dropdown">
+                  <a class="navbar-item has-text-weight-semibold"
+                    ><div>
+                      <span class="icon is-small mr-3"
+                        ><i class="fas fa-users"></i></span
+                      >Profile
+                    </div></a
+                  >
+                  <hr class="navbar-divider" />
+                  <a class="navbar-item has-text-weight-semibold"
+                    ><div>
+                      <span class="icon is-small mr-3"
+                        ><i class="fas fa-sign-out"></i></span
+                      >Sign Out
+                    </div></a
+                  >
+                </div>
+              </div>
+              <a class="navbar-item has-text-weight-semibold is-hidden" href="#"
+                ><span class="icon"><i class="far fa-lg fa-bell"></i></span></a
+              ><a
+                class="navbar-item has-text-weight-semibold is-hidden"
+                href="#"
+                ><span class="icon"><i class="fas fa-lg fa-power-off"></i></span
+              ></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main>
+        <section class="hero has-text-centered is-fullheight">
+          <div class="hero-body">
+            <div class="container">
+              <div class="columns is-centered is-vcentered">
+                <div class="column">
+                  <h1
+                    class="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile has-text-weight-boldd"
+                    style="font-weight: 900"
+                  >
+                    Freelancer, Front-End Web Developer
+                  </h1>
+                  <h2
+                    class="subtitle is-size-4-tablet mx-auto"
+                    style="max-width: 34em"
+                  >
+                    I love to design and develop websites and web applications
+                    and i am passionate about it.
+                  </h2>
+                  <div class="buttons is-centered are-medium">
+                    <a class="button is-primary" href="#projects"
+                      >Recent Projects</a
+                    ><a class="button" href="#contact">Contact Me</a>
+                  </div>
+                  <img
+                    alt="Hero"
+                    fetchpriority="high"
+                    width="500"
+                    height="500"
+                    decoding="async"
+                    data-nimg="1"
+                    style="color: transparent"
+                    src="./img/hero.svg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-foot"><div class="container"></div></div>
+        </section>
+        <section
+          class="section has-text-centered is-medium bg-slate-100"
+          id="service"
+        >
+          <div class="container" style="max-width: 960px">
+            <h1
+              class="title is-spaced is-size-3-desktop is-size-4-mobile"
+              style="font-weight: 800"
+            >
+              My Services
+            </h1>
+            <h2
+              class="subtitle is-size-4-desktop mx-auto"
+              style="max-width: 420px"
+            >
+              Services i can help you with
+            </h2>
+            <div class="columns is-multiline level">
+              <div
+                class="column is-12-touch is-half-desktop is-3-widescreen level-item"
+              >
+                <div class="box px-4">
+                  <span
+                    class="icon is-large has-background-primary-light mb-2"
+                    style="border-radius: 50%"
+                    ><i class="fas fa-globe fa-lg has-text-primary"></i
+                  ></span>
+                  <h1 class="title is-size-5 mb-2">Web Design</h1>
+                  <p>
+                    I specialize in creating visually appealing and
+                    user-friendly websites that meets the client's needs
+                  </p>
+                </div>
+              </div>
+              <div
+                class="column is-12-touch is-half-desktop is-3-widescreen level-item"
+              >
+                <div class="box px-4">
+                  <span
+                    class="icon is-large has-background-primary-light mb-2"
+                    style="border-radius: 50%"
+                    ><i class="fas fa-globe fa-lg has-text-primary"></i
+                  ></span>
+                  <h1 class="title is-size-5 mb-2">Web Development</h1>
+                  <p>
+                    I build quality websites from scratch using the latest and
+                    most efficient technologies
+                  </p>
+                </div>
+              </div>
+              <div
+                class="column is-12-touch is-half-desktop is-3-widescreen level-item"
+              >
+                <div class="box px-4">
+                  <span
+                    class="icon is-large has-background-primary-light mb-2"
+                    style="border-radius: 50%"
+                    ><i class="fas fa-mobile fa-lg has-text-primary"></i
+                  ></span>
+                  <h1 class="title is-size-5 mb-2">Mobile Development</h1>
+                  <p>
+                    I create quality mobile apps from scratch using the flutter
+                    and react native
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section bg-slate-100" id="about">
+          <div class="container">
+            <h1
+              class="title is-spaced is-size-3-desktop is-size-4-mobile has-text-centered"
+              style="font-weight: 800"
+            >
+              About Me
+            </h1>
+            <h2
+              class="subtitle is-size-4-desktop mx-auto has-text-centered"
+              style="max-width: 420px"
+            >
+              Here is a little something about me....
+            </h2>
+            <div class="columns is-centered is-vcentered mt-4">
+              <div class="column is-5">
+                <div class="box">
+                  <div class="columns is-multiline">
+                    <div class="column is-6">
+                      <div class="box has-text-centered has-text-primary">
+                        <span class="icon is-large"
+                          ><i class="fab fa-2x fa-html5"></i
+                        ></span>
+                        <h1 class="title is-size-5 mb-2">HTML 5</h1>
+                      </div>
+                    </div>
+                    <div class="column is-6">
+                      <div class="box has-text-centered has-text-primary">
+                        <span class="icon is-large"
+                          ><i class="fab fa-2x fa-css3-alt"></i
+                        ></span>
+                        <h1 class="title is-size-5 mb-2">CSS 3</h1>
+                      </div>
+                    </div>
+                    <div class="column is-6">
+                      <div class="box has-text-centered has-text-primary">
+                        <span class="icon is-large"
+                          ><i class="fab fa-2x fa-js"></i
+                        ></span>
+                        <h1 class="title is-size-5 mb-2">JAVASCRIPT</h1>
+                      </div>
+                    </div>
+                    <div class="column is-6">
+                      <div class="box has-text-centered has-text-primary">
+                        <span class="icon is-large"
+                          ><i class="fab fa-2x fa-sass"></i
+                        ></span>
+                        <h1 class="title is-size-5 mb-2">SASS</h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-5 is-offset-1">
+                <div class="boxx">
+                  <h1 class="title is-3">Hi, I am Patrick Uche</h1>
+                  <p class="subtitle is-4 has-text-weight-normal">
+                    I am passionate about creating web and mobile applications,
+                    i am proficient in web and mobile technologies such as
+                    HTML5, CSS3, Javascript, Bumla, Dart &amp; Flutter and an
+                    in-depth understaning of Git/Github workflow
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section is-medium has-text-centered" id="projects">
+          <div class="container">
+            <h1
+              class="title is-spaced is-size-3-desktop is-size-4-mobile"
+              style="font-weight: 800"
+            >
+              My Recent Work
+            </h1>
+            <h2
+              class="subtitle is-size-4-desktop mx-auto"
+              style="max-width: 420px"
+            >
+              My recent web designs &amp; some past projects
+            </h2>
+            <div class="columns is-multiline is-mobilee mt-6">
+              <div
+                class="column is-12-mobile is-half-tablet is-one-third-desktop"
+              >
+                <div class="project">
+                  <div
+                    style="background-image: url('./img/bookify.png')"
+                    class="project-image"
+                  ></div>
+                  <div class="overlayer">
+                    <div class="project-text">
+                      <h1
+                        class="title is-size-5 is-size-4-widescreen has-text-white"
+                      >
+                        Bookify Website
+                      </h1>
+                      <a
+                        class="button is-white is-outlined is-rounded"
+                        href="/"
+                        target="_blank"
+                        ><span>Visit Website</span
+                        ><span class="icon"
+                          ><i class="fas fa-angle-right"></i></span
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="column is-12-mobile is-half-tablet is-one-third-desktop"
+              >
+                <div class="project">
+                  <div
+                    style="background-image: url('./img/investment.png')"
+                    class="project-image"
+                  ></div>
+                  <div class="overlayer">
+                    <div class="project-text">
+                      <h1
+                        class="title is-size-5 is-size-4-widescreen has-text-white"
+                      >
+                        Investment Website
+                      </h1>
+                      <a
+                        class="button is-white is-outlined is-rounded"
+                        href="/"
+                        target="_blank"
+                        ><span>Visit Website</span
+                        ><span class="icon"
+                          ><i class="fas fa-angle-right"></i></span
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="column is-12-mobile is-half-tablet is-one-third-desktop"
+              >
+                <div class="project">
+                  <div
+                    style="background-image: url('./img/nft.png')"
+                    class="project-image"
+                  ></div>
+                  <div class="overlayer">
+                    <div class="project-text">
+                      <h1
+                        class="title is-size-5 is-size-4-widescreen has-text-white"
+                      >
+                        NFT Website
+                      </h1>
+                      <a
+                        class="button is-white is-outlined is-rounded"
+                        href="/"
+                        target="_blank"
+                        ><span>Visit Website</span
+                        ><span class="icon"
+                          ><i class="fas fa-angle-right"></i></span
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="columns is-centered">
+            <div class="column is-11"></div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="columns is-centered">
+            <div class="column is-11">
+              <div
+                class="level box has-background-dark py-6 px-6"
+                style="border-radius: 16px"
+              >
+                <div class="level-left">
+                  <div class="level-item">
+                    <div class="has-text-centered-mobile">
+                      <h3
+                        class="title has-text-weight-bold mb-5 has-text-white"
+                      >
+                        Start a project
+                      </h3>
+                      <p class="subtitle has-text-grey-light">
+                        Interested in starting a project? Holla at me
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item">
+                    <button
+                      class="button is-white is-rounded is-outlined is-medium" @click="openModal = true"
+                    >
+                      Contact me!
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer
+        class="footer pb-2 has-text-centered has-background-black-ter"
+        id="contact"
+      >
+        <div class="container">
+          <span class="icon mb-5 is-size-2 has-text-grey-light"
+            ><i class="fas fa-laptop"></i
+          ></span>
+          <h1
+            class="title is-size-4 has-text-white is-uppercase has-text-weight-bold"
+          >
+            Patutechz
+          </h1>
+          <div class="buttons are-medium is-centered">
+            <a
+              href="https://www.facebook.com/patrick.uche.543/"
+              class="button is-light is-outlined"
+              style="border-radius: 9999px"
+              ><span class="icon"><i class="fab fa-facebook"></i></span></a
+            ><a
+              href="https://github.com/patutechz"
+              class="button is-light is-outlined"
+              style="border-radius: 9999px"
+              ><span class="icon"><i class="fab fa-github"></i></span></a
+            ><a
+              href="https://www.linkedin.com/in/okpunor-patrick-b-sc-155467186/"
+              class="button is-light is-outlined"
+              style="border-radius: 9999px"
+              ><span class="icon"><i class="fab fa-linkedin"></i></span></a
+            ><a
+              href="https://www.instagram.com/patutechz/"
+              class="button is-light is-outlined"
+              style="border-radius: 9999px"
+              ><span class="icon"><i class="fab fa-instagram"></i></span></a
+            ><a
+              href="https://x.com/Uche_ricky"
+              class="button is-light is-outlined"
+              style="border-radius: 9999px"
+              ><span class="icon"><i class="fab fa-twitter"></i></span
+            ></a>
+          </div>
+          <div>
+            <p class="has-text-white">
+              Coded with
+              <span class="icon"
+                ><i class="fas fa-heart has-text-danger"></i
+              ></span>
+              by Patrick Uche using bulma and next js
+            </p>
+          </div>
+        </div>
+      </footer>
+      <a class="link-button"><i class="fab fa-whatsapp"></i></a>
+      <div class="modal" :class="{ 'is-active': openModal }">
+        <div class="modal-background" @click="openModal = false"></div>
+        <div class="modal-content">
+          <div class="box">
+            <figure class="image is-96x96 mx-auto">
+              <img class="is-rounded" src="./img/me.jpg" />
+            </figure>
+            <div class="has-text-centered mt-4">
+              <h2 class="title is-size-5">Patrick Uche</h2>
+              <h2 class="subtitle is-size-6 has-text-primary">
+                Frontend Developer
+              </h2>
+            </div>
+            <div class="buttons is-centered mt-4">
+              <a
+                href="https://www.facebook.com/patrick.uche.543/"
+                class="button is-primary"
+                style="border-radius: 9999px"
+                ><span class="icon"><i class="fab fa-facebook"></i></span></a
+              ><a
+                href="https://github.com/patutechz"
+                class="button is-primary"
+                style="border-radius: 9999px"
+                ><span class="icon"><i class="fab fa-github"></i></span></a
+              ><a
+                href="https://www.linkedin.com/in/okpunor-patrick-b-sc-155467186/"
+                class="button is-primary"
+                style="border-radius: 9999px"
+                ><span class="icon"><i class="fab fa-linkedin"></i></span></a
+              ><a
+                href="https://www.instagram.com/patutechz/"
+                class="button is-primary"
+                style="border-radius: 9999px"
+                ><span class="icon"><i class="fab fa-instagram"></i></span></a
+              ><a
+                href="https://x.com/Uche_ricky"
+                class="button is-primary"
+                style="border-radius: 9999px"
+                ><span class="icon"><i class="fab fa-twitter"></i></span
+              ></a>
+            </div>
+          </div>
+        </div>
+        <button class="modal-close is-large" @click="openModal = false"></button>
+      </div>
+    </div>
+    <script type="text/javascript" src="lib/alpine.js"></script>
+  </body>
+</html>
